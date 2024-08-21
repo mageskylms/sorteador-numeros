@@ -65,7 +65,7 @@ function verificaDe() {
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
     if (de > ate) {
-        alert('"Do número" não pode ser maior que "Até!');
+        alert('"Do número" não pode ser maior que "Até. Por favor, comece novamente!');
         return false;
     } else {
         return true;
