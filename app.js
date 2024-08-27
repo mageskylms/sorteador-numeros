@@ -6,6 +6,12 @@ function sortear() {
     let ate = parseInt(document.getElementById('ate').value);
     let verificacao = verificaDe();
     if (verificacao == true) {
+        if (quantidade > (ate - de + 1)) {
+            alert('Campo "Quantidade" deve ser menor ou igual ao intervalo informado no campo "Do número" até o campo "Até o número". Verifique!');
+            reiniciar();
+            reiniciar();
+            return;
+        }
         //cria a lista para receber números sorteados
         let sorteados = [];
         // variável que vai receber o número sorteado e que será adicionado na lista 'sorteados'
@@ -26,7 +32,7 @@ function sortear() {
         //altera status dos botões
         alterarStatusBotao('btn-reiniciar');
         alterarStatusBotao('btn-sortear');
-    }   else{
+    } else {
         reiniciar();
         reiniciar();
     }
